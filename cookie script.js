@@ -68,10 +68,14 @@ function load() {
 
 function updateUI() {
     document.getElementById("clicks").innerHTML = "Clicks: " + v.clicks;
-    //document.getElementById("points_per_click").innerHTML = "Points per click: " + v.points_per_click;
-    //document.getElementById("points_per_click_cost").innerHTML = "Upgrade cost: " + v.points_per_click_cost;
-    document.getElementById("idle_income").innerHTML = "Idle income: " + v.idle_income;
-    //document.getElementById("idle_income_cost").innerHTML = "Idle income cost: " + v.idle_income_cost;
+    document.getElementById("points_per_click").innerHTML = "Points per Click: " + v.points_per_click;
+    document.getElementById("points_per_click_cost").innerHTML = "Upgrade Cost: " + v.points_per_click_cost;
+    document.getElementById("idle_income").innerHTML = "Idle Income: " + v.idle_income;
+    document.getElementById("idle_income_cost").innerHTML = "Idle Income Cost: " + v.idle_income_cost;
+
+    // Disable buttons if not enough clicks for upgrades
+    document.getElementById("upgrade-button").disabled = v.clicks < v.points_per_click_cost;
+    document.getElementById("idle-upgrade-button").disabled = v.clicks < v.idle_income_cost;
 }
 
 // Auto-load the saved game state when the page loads

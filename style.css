@@ -1,9 +1,9 @@
-/* style.css */
 body {
     background-color: #00008b; /* Dark blue background */
-    color: #000; /* Black text color */
+    color: #fff; /* White text color for better contrast */
     margin: 0;
     font-family: Arial, sans-serif;
+    text-align: center; /* Center text alignment for game display */
 }
 
 #aqua-section {
@@ -11,7 +11,7 @@ body {
     right: 0;
     top: 0;
     background-color: aqua;
-    width: 150px; /* Adjust width as needed */
+    width: 150px;
     height: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -21,11 +21,19 @@ button {
     margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #ddd; /* Lighter background on hover */
 }
 
 img {
     display: block;
     margin: 20px auto;
-    width: 300px; /* Adjust cookie size as needed */
+    width: 300px;
     cursor: pointer;
 }

@@ -9,15 +9,18 @@
 <body>
     <button onclick="save()">Save</button>
     <h1 id="clicks">Clicks: 0</h1>
-    <h1 id="idle_income">Idle Income</h1>
+    <h2 id="points_per_click">Points per Click: 1</h2>
+    <h2 id="points_per_click_cost">Upgrade Cost: 10</h2>
+    <h1 id="idle_income">Idle Income: 0</h1>
+    <h2 id="idle_income_cost">Idle Income Cost: 20</h2>
 
     <a onclick="cookie_click()">
         <img src="sprites/cookie.png" alt="Cookie Image">
     </a>
 
     <div id="aqua-section">
-        <button onclick="upgrade()">Upgrade</button>
-        <button onclick="idle_upgrade()">Idle Income</button>
+        <button id="upgrade-button" onclick="upgrade()">Upgrade</button>
+        <button id="idle-upgrade-button" onclick="idle_upgrade()">Idle Income</button>
     </div>
 
     <script defer src="cookie-script.js"></script>
