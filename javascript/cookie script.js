@@ -33,7 +33,7 @@ function idle_upgrade(){
 }
 
 function idle_income_func(){
-    clicks += idle_income
+    v.clicks += v.idle_income
     updateUI
 }
 
