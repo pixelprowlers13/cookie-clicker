@@ -68,9 +68,9 @@ function load() {
 
 function updateUI() {
     document.getElementById("clicks").innerHTML = "Clicks: " + v.clicks;
-    document.getElementById("points_per_click").innerHTML = "Points per click: " + v.points_per_click;
+    //document.getElementById("points_per_click").innerHTML = "Points per click: " + v.points_per_click;
     //document.getElementById("points_per_click_cost").innerHTML = "Upgrade cost: " + v.points_per_click_cost;
-    //document.getElementById("idle_income").innerHTML = "Idle income: " + v.idle_income;
+    document.getElementById("idle_income").innerHTML = "Idle income: " + v.idle_income;
     //document.getElementById("idle_income_cost").innerHTML = "Idle income cost: " + v.idle_income_cost;
 }
 
