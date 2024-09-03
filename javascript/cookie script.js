@@ -1,7 +1,8 @@
 const v = {
     clicks: 0,
     points_per_click: 1,
-    points_per_click_cost: 10
+    points_per_click_cost: 10,
+    idle_income: 0
 };
 
 function cookie_click() {
