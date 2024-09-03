@@ -24,19 +24,24 @@ function upgrade() {
     }
 }
 
-function idle_upgrade(){
-    if (v.clicks >= v.idle_income_cost){
-        v.idle_income += 1
-        updateUI()
+function idle_upgrade() {
+    if (v.clicks >= v.idle_income_cost) {
+        v.clicks -= v.idle_income_cost;
+        v.idle_income += 1;
+        v.idle_income_cost *= 2;
+        updateUI();
+    } else {
+        window.alert('Not enough clicks');
     }
-    
 }
 
-function idle_income_func(){
-    v.clicks += v.idle_income
-    updateUI
+function idle_income_func() {
+    v.clicks += v.idle_income;
+    updateUI();
 }
 
+// Call idle_income_func every second
+setInterval(idle_income_func, 1000);
 
 function save() {
     localStorage.setItem("values", JSON.stringify(v));
@@ -50,6 +55,8 @@ function load() {
             v.clicks = parsedValues.clicks;
             v.points_per_click = parsedValues.points_per_click;
             v.points_per_click_cost = parsedValues.points_per_click_cost;
+            v.idle_income = parsedValues.idle_income;
+            v.idle_income_cost = parsedValues.idle_income_cost;
             updateUI();
         } catch (error) {
             console.error('Failed to load saved data:', error);
@@ -61,9 +68,11 @@ function load() {
 
 function updateUI() {
     document.getElementById("clicks").innerHTML = "Clicks: " + v.clicks;
-    document.getElementById("idle income").innerHTML = "idle income: " + v.idle_income;
+    document.getElementById("points_per_click").innerHTML = "Points per click: " + v.points_per_click;
+    //document.getElementById("points_per_click_cost").innerHTML = "Upgrade cost: " + v.points_per_click_cost;
+    //document.getElementById("idle_income").innerHTML = "Idle income: " + v.idle_income;
+    //document.getElementById("idle_income_cost").innerHTML = "Idle income cost: " + v.idle_income_cost;
 }
 
 // Auto-load the saved game state when the page loads
 window.onload = load;
-setInterval(idle_income_func, 1000)
