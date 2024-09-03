@@ -78,5 +78,47 @@ function updateUI() {
     document.getElementById("idle-upgrade-button").disabled = v.clicks < v.idle_income_cost;
 }
 
+// Export save data as a JSON file
+function exportSave() {
+    const dataStr = JSON.stringify(v);
+    const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+
+    const exportFileDefaultName = 'cookie-clicker-save.json';
+
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.click();
+}
+
+// Import save data from a JSON file
+function importSave(event) {
+    const file = event.target.files[0];
+    if (!file) {
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const contents = e.target.result;
+            const importedValues = JSON.parse(contents);
+
+            v.clicks = importedValues.clicks;
+            v.points_per_click = importedValues.points_per_click;
+            v.points_per_click_cost = importedValues.points_per_click_cost;
+            v.idle_income = importedValues.idle_income;
+            v.idle_income_cost = importedValues.idle_income_cost;
+            updateUI();
+            save(); // Save imported data to localStorage
+        } catch (error) {
+            console.error('Failed to import save data:', error);
+            window.alert('Failed to import save data.');
+        }
+    };
+
+    reader.readAsText(file);
+}
+
 // Auto-load the saved game state when the page loads
 window.onload = load;
