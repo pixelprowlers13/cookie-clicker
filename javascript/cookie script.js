@@ -2,7 +2,8 @@ const v = {
     clicks: 0,
     points_per_click: 1,
     points_per_click_cost: 10,
-    idle_income: 0
+    idle_income: 0,
+    idle_income_cost: 20,
 };
 
 function cookie_click() {
@@ -22,6 +23,20 @@ function upgrade() {
         window.alert('Not enough clicks');
     }
 }
+
+function idle_upgrade(){
+    if (v.clicks >= v.idle_income_cost){
+        v.idle_income += 1
+        updateUI()
+    }
+    
+}
+
+function idle_income_func(){
+    clicks += idle_income
+    updateUI
+}
+
 
 function save() {
     localStorage.setItem("values", JSON.stringify(v));
@@ -46,7 +61,9 @@ function load() {
 
 function updateUI() {
     document.getElementById("clicks").innerHTML = "Clicks: " + v.clicks;
+    document.getElementById("idle income").innerHTML = "idle income: " + v.idle_income;
 }
 
 // Auto-load the saved game state when the page loads
 window.onload = load;
+setInterval(idle_income_func, 1000)
