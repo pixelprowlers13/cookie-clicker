@@ -1,0 +1,10 @@
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\bin\Debug\cookie clicker c#.exe.config
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\bin\Debug\cookie clicker c#.exe
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\bin\Debug\cookie clicker c#.pdb
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\obj\Debug\cookie clicker c#.csproj.AssemblyReference.cache
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\obj\Debug\cookie_clicker_c_.Form1.resources
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\obj\Debug\cookie_clicker_c_.Properties.Resources.resources
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\obj\Debug\cookie clicker c#.csproj.GenerateResource.cache
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\obj\Debug\cookie clicker c#.csproj.CoreCompileInputs.cache
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\obj\Debug\cookie clicker c#.exe
+C:\Users\Usher\OneDrive\Documents\cookie clicker\cookie clicker c#\cookie clicker c#\obj\Debug\cookie clicker c#.pdb
